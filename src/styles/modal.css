@@ -1,0 +1,128 @@
+.container__modal{
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__rules{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+.modal__rules > h1{
+    position: absolute;
+    top: 32px;
+    right: 0;
+    left: 0;
+    width: 104px;
+    margin: 0 auto;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color:#3b4363;
+}
+
+.rules__closeBtn{
+    position: absolute;
+    bottom: 64px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.modal__rules__box{
+    position: relative;
+    top: 192px;
+    width: 300px;
+    height:224px;
+    margin: 0 auto;
+}
+
+.rules__arrow__one{
+    position: absolute;
+    width: 72px;
+    top: 16px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transform: rotate(180deg);
+}
+.rules__arrow__two{
+    position: absolute;
+    width: 72px;
+    top: 96px;
+    right: 64px;
+    transform: rotate(315deg);
+}
+.rules__arrow__three{
+    position: absolute;
+    width: 72px;
+    top: 96px;
+    left: 64px;
+    transform: rotate(45deg);
+}
+.rules__text__one{
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #606e85;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 37px;
+    margin: 0 auto;
+}
+.rules__text__two{
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #606e85;
+    position: absolute;
+    top:112px;
+    left: 48px;
+}
+.rules__text__three{
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #606e85;
+    position: absolute;
+    top: 112px;
+    right: 48px;
+}
+.modal__rules__options--paper{
+    background: url(/src/assets/img/icon-paper.svg);
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
+.modal__rules__options--rock{
+    background: url(/src/assets/img/icon-rock.svg);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+}
+.modal__rules__options--scissor{
+    background: url(/src/assets/img/icon-scissors.svg);
+    position: absolute;
+    top: 0;
+    right: 20px;
+
+}
+.modal__rules__options{
+    background-repeat: no-repeat;
+    width: 88px;
+    height: 88px;
+    background-color: #fff;
+    background-position: center;
+    border-radius: 50%;
+    border: 10px solid #b5bdc8;
+    background-color: #f0f0f0;
+}

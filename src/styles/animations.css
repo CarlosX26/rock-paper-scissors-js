@@ -1,0 +1,104 @@
+@keyframes modalIn {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes modalOut {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes opacityRotate {
+  0% {
+    opacity: 0;
+    rotate: 360deg;
+  }
+  100% {
+    opacity: 1;
+    rotate: 0deg;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scissorSlide {
+  0% {
+    transform: translateX(153%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes paperRotate {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rockTranslate {
+  0% {
+    transform: translate(80%, 130%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+
+.rockTranslate {
+  animation: rockTranslate 0.3s ease;
+}
+
+.paperRotate {
+  animation: paperRotate 0.3s ease;
+}
+
+.scissorSlide {
+  animation: scissorSlide 0.3s ease;
+}
+
+.opacity {
+  animation: opacity 0.7s ease;
+}
+
+.opacityRotate {
+  animation: opacityRotate 0.7s ease;
+}
+
+.bounce {
+  animation: bounce 0.7s infinite ease;
+}
+
+.modal__in {
+  animation: modalIn 1s ease;
+}
+.modal__out {
+  animation: modalOut 1s ease;
+}
