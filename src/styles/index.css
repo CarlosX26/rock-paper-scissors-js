@@ -4,7 +4,8 @@ body {
 }
 
 .container {
-  width: 300px;
+  width: 85%;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -14,7 +15,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 16px;
-  margin-top: 32px;
+  margin-top: 24px;
 }
 
 .cabecalho__logo {
@@ -40,80 +41,86 @@ body {
 
 .box__option {
   position: relative;
-  margin-top: 64px;
-  height: 280px;
+  margin-top: 32px;
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  justify-items: center;
 }
 
 .option__paper {
-  position: absolute;
-  top: -32px;
-  left: -12px;
+  position: relative;
+  top: 0;
+  left: -24px;
   background: url(../assets/img/icon-paper.svg);
   background-repeat: no-repeat;
-  width: 128px;
-  height: 128px;
+  width: 120px;
+  height: 120px;
   background-color: #fff;
   background-position: center;
   border-radius: 50%;
   border: 10px solid #4865f4;
 }
 .option__scissor {
-  position: absolute;
-  top: -32px;
-  right: -12px;
+  position: relative;
+  top: 0;
+  right: -24px;
   background: url(../assets/img/icon-scissors.svg);
   background-repeat: no-repeat;
-  width: 128px;
-  height: 128px;
+  width: 120px;
+  height: 120px;
   background-color: #fff;
   background-position: center;
   border-radius: 50%;
   border: 10px solid #ec9e0e;
 }
 .option__rock {
-  position: absolute;
-  top: 134px;
-  right: 88px;
   background: url(../assets/img/icon-rock.svg);
   background-repeat: no-repeat;
-  width: 128px;
-  height: 128px;
+  width: 120px;
+  height: 120px;
   background-color: #fff;
   background-position: center;
   border-radius: 50%;
   border: 10px solid #dc2e4e;
+  grid-column: 1 / span 3;
+  margin-top: 48px;
 }
 
 .option__triangle {
+  width: 90%;
   position: relative;
   transform: rotate(180deg);
   z-index: -1;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .triangle__one {
   position: absolute;
-  top: -264px;
+  top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
+  margin: 0 auto;
+  width: 90%;
   height: 264px;
   background-color: #3b4363;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 .triangle__twoo {
   position: absolute;
-  top: 24px;
+  top: 32px;
   left: 0;
   right: 0;
   margin: 0 auto;
   width: 80%;
-  height: 224px;
+  height: 80%;
   background: #1c2f4f;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 
 .btn__rules {
   position: absolute;
-  bottom: 40px;
+  bottom: 32px;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -135,39 +142,39 @@ body {
 }
 
 .option__paper--action {
-  position: absolute;
-  top: -32px;
-  left: -12px;
+  position: relative;
+  top: 0;
+  left: -24px;
   background: url(../assets/img/icon-paper.svg);
   background-repeat: no-repeat;
-  width: 128px;
-  height: 128px;
+  width: 120px;
+  height: 120px;
   background-color: #fff;
   background-position: center;
   border-radius: 50%;
   border: 10px solid #4865f4;
 }
 .option__rock--action {
-  position: absolute;
-  top: -32px;
-  left: -12px;
+  position: relative;
+  top: 0;
+  left: -24px;
   background: url(../assets/img/icon-rock.svg);
   background-repeat: no-repeat;
-  width: 128px;
-  height: 128px;
+  width: 120px;
+  height: 120px;
   background-color: #fff;
   background-position: center;
   border-radius: 50%;
   border: 10px solid #dc2e4e;
 }
 .option__scissor--action {
-  position: absolute;
-  top: -32px;
-  left: -12px;
+  position: relative;
+  top: 0;
+  left: -24px;
   background: url(../assets/img/icon-scissors.svg);
   background-repeat: no-repeat;
-  width: 128px;
-  height: 128px;
+  width: 120px;
+  height: 120px;
   background-color: #fff;
   background-position: center;
   border-radius: 50%;
@@ -175,13 +182,13 @@ body {
 }
 
 .option__paper--actionCpu {
-  position: absolute;
-  top: -32px;
-  right: -12px;
+  position: relative;
+  top: 0;
+  right: -24px;
   background: url(../assets/img/icon-paper.svg);
   background-repeat: no-repeat;
-  width: 128px;
-  height: 128px;
+  width: 120px;
+  height: 120px;
   background-color: #fff;
   background-position: center;
   border-radius: 50%;
@@ -189,13 +196,13 @@ body {
 }
 
 .option__scissor--actionCpu {
-  position: absolute;
-  top: -32px;
-  right: -12px;
+  position: relative;
+  top: 0;
+  right: -24px;
   background: url(../assets/img/icon-scissors.svg);
   background-repeat: no-repeat;
-  width: 128px;
-  height: 128px;
+  width: 120px;
+  height: 120px;
   background-color: #fff;
   background-position: center;
   border-radius: 50%;
@@ -203,13 +210,13 @@ body {
 }
 
 .option__rock--actionCpu {
-  position: absolute;
-  top: -32px;
-  right: -12px;
+  position: relative;
+  top: 0;
+  right: -24px;
   background: url(../assets/img/icon-rock.svg);
   background-repeat: no-repeat;
-  width: 128px;
-  height: 128px;
+  width: 120px;
+  height: 120px;
   background-color: #fff;
   background-position: center;
   border-radius: 50%;
@@ -217,14 +224,14 @@ body {
 }
 
 .result__game {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 16px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  margin-top: 32px;
 }
 
 .result__game > h1 {
@@ -253,8 +260,30 @@ body {
   color: #141539;
 }
 
-/* @media (min-width: 768px) {
-  .container {
-    width: 700px;
+@media (min-width: 540px) {
+  .option__paper {
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
   }
-} */
+  .option__scissor {
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+  }
+  .option__rock {
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+  }
+  .option__triangle {
+    width: 70%;
+  }
+  .triangle__one {
+    top: 24px;
+  }
+  .btn__rules {
+    left: unset;
+    right: 10%;
+  }
+}
