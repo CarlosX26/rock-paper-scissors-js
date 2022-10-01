@@ -23,6 +23,9 @@
   50% {
     transform: translateY(20px);
   }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 @keyframes opacityRotate {
@@ -93,7 +96,7 @@
 }
 
 .bounce {
-  animation: bounce 0.7s infinite ease;
+  animation: bounce 0.7212s infinite ease;
 }
 
 .modal__in {
