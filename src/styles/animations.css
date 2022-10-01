@@ -47,7 +47,7 @@
 
 @keyframes scissorSlide {
   0% {
-    transform: translateX(153%);
+    transform: translateX(150%);
   }
   100% {
     transform: translateX(0%);
@@ -65,7 +65,7 @@
 
 @keyframes rockTranslate {
   0% {
-    transform: translate(80%, 130%);
+    transform: translate(100%, 120%);
   }
   100% {
     transform: translate(0%, 0%);

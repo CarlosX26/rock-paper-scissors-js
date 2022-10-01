@@ -147,8 +147,8 @@ class RpsGame {
 
       const btnCloseModal = document.querySelector("[data-close=modalRules]");
       btnCloseModal.addEventListener("click", () => {
-        modal.classList.remove("modal__in");
-        modal.classList.add("modal__out");
+        modal.children[0].classList.remove("modal__in");
+        modal.children[0].classList.add("modal__out");
         setTimeout(() => {
           body.removeChild(body.lastChild);
         }, 900);
@@ -163,11 +163,6 @@ class RpsGame {
   }
 
   static checkTheWinner(playerOption, cpuOption, h1) {
-    console.log({
-      player: playerOption,
-      cpu: cpuOption,
-    });
-
     const playerWinRock = playerOption == "rock" && cpuOption == "scissor";
     const playerWinScissor = playerOption == "scissor" && cpuOption == "paper";
     const playerWinPaper = playerOption == "paper" && cpuOption == "rock";

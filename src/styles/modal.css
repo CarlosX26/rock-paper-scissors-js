@@ -124,3 +124,26 @@
   border: 10px solid #b5bdc8;
   background-color: #f0f0f0;
 }
+
+@media (min-width: 540px) {
+  .modal__rules {
+    max-width: 480px;
+    height: 420px;
+    border-radius: 8px;
+  }
+  .modal__rules__box {
+    top: 128px;
+  }
+  .modal__rules > h1 {
+    left: 64px;
+    margin: unset;
+  }
+  .rules__closeBtn {
+    bottom: unset;
+    left: unset;
+    margin: unset;
+    top: 32px;
+    right: 64px;
+    cursor: pointer;
+  }
+}
