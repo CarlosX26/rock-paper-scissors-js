@@ -1,6 +1,6 @@
 body {
   background: linear-gradient(180deg, #1f3756, #141539);
-  height: 96vh;
+  height: 100vh;
 }
 
 .container {
@@ -282,6 +282,35 @@ body {
   .triangle__one {
     top: 24px;
   }
+
+  .option__paper--action {
+    width: 150px;
+    height: 150px;
+  }
+  .option__rock--action {
+    width: 150px;
+    height: 150px;
+  }
+  .option__scissor--action {
+    width: 150px;
+    height: 150px;
+  }
+
+  .option__paper--actionCpu {
+    width: 150px;
+    height: 150px;
+  }
+
+  .option__scissor--actionCpu {
+    width: 150px;
+    height: 150px;
+  }
+
+  .option__rock--actionCpu {
+    width: 150px;
+    height: 150px;
+  }
+
   .btn__rules {
     left: unset;
     right: 10%;
