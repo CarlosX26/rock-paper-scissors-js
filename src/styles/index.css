@@ -1,6 +1,6 @@
 body {
   background: linear-gradient(180deg, #1f3756, #141539);
-  min-height: 100vmin;
+  min-height: 100vh;
 }
 header {
   padding-top: 24px;
