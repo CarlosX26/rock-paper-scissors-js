@@ -1,56 +1,60 @@
+import Tag from "./tag.js";
+
 export default class Modal {
-    static modalGameRules(){
-        const containerModal = document.createElement("section")
-        const modal          = document.createElement("div")
-        const h1             = document.createElement("h1")
-        const imgCloseBtn    = document.createElement("img")
-        const divBox         = document.createElement("div")
+  static modalGameRules() {
+    const containerModal = new Tag("section", "container__modal").get();
 
-        const optionPaper    = document.createElement("div")
-        const optionScissor  = document.createElement("div")
-        const optionRock     = document.createElement("div")
+    const modal = new Tag("div", "modal__rules modal__in").get();
 
-        const pBeats         = document.createElement("p")
-        const pBeats1        = document.createElement("p")
-        const pBeats2        = document.createElement("p")
+    const h1 = new Tag("h1", null, "Rules")
+      .addAttribute("src", "src/assets/img/icon-close.svg")
+      .get();
+    const imgCloseBtn = new Tag("img", "rules__closeBtn")
+      .addAttribute("data-close", "modalRules")
+      .addAttribute("src", "src/assets/img/icon-close.svg")
+      .get();
+    const divBox = new Tag("div", "modal__rules__box").get();
 
-        const imgArrow       = document.createElement("img")
-        const imgArrow1      = document.createElement("img")
-        const imgArrow2      = document.createElement("img")
+    const optionPaper = new Tag(
+      "div",
+      "modal__rules__options modal__rules__options--paper"
+    ).get();
+    const optionScissor = new Tag(
+      "div",
+      "modal__rules__options modal__rules__options--rock"
+    ).get();
+    const optionRock = new Tag(
+      "div",
+      "modal__rules__options modal__rules__options--scissor"
+    ).get();
 
-        h1.innerText         = "Rules"
-        imgCloseBtn.src      = "src/assets/img/icon-close.svg"
+    const pBeats = new Tag("p", "rules__text__one", "Beats").get();
+    const pBeats1 = new Tag("p", "rules__text__two", "Beats").get();
+    const pBeats2 = new Tag("p", "rules__text__three", "Beats").get();
 
-        pBeats.innerText     = "Beats"
-        pBeats1.innerText    = "Beats"
-        pBeats2.innerText    = "Beats"
+    const imgArrow = new Tag("img", "rules__arrow__one")
+      .addAttribute("src", "src/assets/img/arrow-vector-removebg.png")
+      .get();
+    const imgArrow1 = new Tag("img", "rules__arrow__two")
+      .addAttribute("src", "src/assets/img/arrow-vector-removebg.png")
+      .get();
+    const imgArrow2 = new Tag("img", "rules__arrow__three")
+      .addAttribute("src", "src/assets/img/arrow-vector-removebg.png")
+      .get();
 
-        imgArrow.src         = "src/assets/img/arrow-vector-removebg.png"
-        imgArrow1.src        = "src/assets/img/arrow-vector-removebg.png"
-        imgArrow2.src        = "src/assets/img/arrow-vector-removebg.png"
-
-        imgCloseBtn.className = "rules__closeBtn"
-        imgArrow.className    = "rules__arrow__one"
-        imgArrow1.className   = "rules__arrow__two"
-        imgArrow2.className   = "rules__arrow__three"
-
-        containerModal.className = "container__modal"
-        modal.className          = "modal__rules modal__in"
-        pBeats.className         = "rules__text__one"
-        pBeats1.className        = "rules__text__two"
-        pBeats2.className        = "rules__text__three"
-        optionPaper.className    = "modal__rules__options modal__rules__options--paper"
-        optionScissor.className  = "modal__rules__options modal__rules__options--rock"
-        optionRock.className     = "modal__rules__options modal__rules__options--scissor"
-        divBox.className         = "modal__rules__box"
-
-        imgCloseBtn.setAttribute("data-close","modalRules")
-
-        divBox.append( optionPaper, optionScissor, optionRock, pBeats, pBeats1, pBeats2, imgArrow, imgArrow1, imgArrow2)
-        modal.append(h1, imgCloseBtn, divBox)
-        containerModal.appendChild(modal)
-        return containerModal
-    }
-
-
+    divBox.append(
+      optionPaper,
+      optionScissor,
+      optionRock,
+      pBeats,
+      pBeats1,
+      pBeats2,
+      imgArrow,
+      imgArrow1,
+      imgArrow2
+    );
+    modal.append(h1, imgCloseBtn, divBox);
+    containerModal.append(modal);
+    return containerModal;
+  }
 }
