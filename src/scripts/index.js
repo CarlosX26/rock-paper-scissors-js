@@ -1,4 +1,5 @@
 import Modal from "./models/modal.js";
+import Tag from "../scripts/models/tag.js";
 
 class RpsGame {
   static options = ["rock", "paper", "scissor"];
@@ -8,25 +9,18 @@ class RpsGame {
   static initialOptions() {
     const boxOptions = document.getElementById("options");
 
-    const optionPaper = document.createElement("div");
-    const optionScissor = document.createElement("div");
-    const optionRock = document.createElement("div");
-    const triangle = document.createElement("div");
-    const triangleOne = document.createElement("div");
-    const triangleTwo = document.createElement("div");
-
-    optionPaper.className = "option__paper opacityRotate";
-    optionPaper.setAttribute("data-option", "paper");
-
-    optionScissor.className = "option__scissor opacityRotate";
-    optionScissor.setAttribute("data-option", "scissor");
-
-    optionRock.className = "option__rock opacityRotate";
-    optionRock.setAttribute("data-option", "rock");
-
-    triangle.className = "option__triangle opacity";
-    triangleOne.className = "triangle__one";
-    triangleTwo.className = "triangle__twoo";
+    const optionPaper = new Tag("div", "option__paper opacityRotate")
+      .addAttribute("data-option", "paper")
+      .get();
+    const optionScissor = new Tag("div", "option__scissor opacityRotate")
+      .addAttribute("data-option", "scissor")
+      .get();
+    const optionRock = new Tag("div", "option__rock opacityRotate")
+      .addAttribute("data-option", "rock")
+      .get();
+    const triangle = new Tag("div", "option__triangle opacity").get();
+    const triangleOne = new Tag("div", "triangle__one").get();
+    const triangleTwo = new Tag("div", "triangle__twoo").get();
 
     boxOptions.innerHTML = "";
     boxOptions.append(optionPaper, optionScissor, optionRock, triangle);
@@ -54,15 +48,15 @@ class RpsGame {
     const boxOptions = document.getElementById("options");
     boxOptions.innerHTML = "";
 
-    const optionPlayerDom = document.createElement("div");
-    const optionCpuDom = document.createElement("div");
+    const optionPlayerDom = new Tag("div").get();
+    const optionCpuDom = new Tag("div").get();
 
-    const divBox = document.createElement("div");
-    const h1 = document.createElement("h1");
-    const button = document.createElement("button");
-    button.setAttribute("data-button", "playAgain");
-    button.innerText = "Play Again";
-    divBox.className = "result__game opacity";
+    const divBox = new Tag("div", "result__game opacity").get();
+    const h1 = new Tag("h1").get();
+    const button = new Tag("button", null, "Play Again")
+      .addAttribute("data-button", "playAgain")
+      .get();
+
     divBox.append(h1, button);
 
     switch (optionPlayer) {

@@ -1,8 +1,10 @@
 body {
   background: linear-gradient(180deg, #1f3756, #141539);
-  height: 100vh;
+  min-height: 100vmin;
 }
-
+header {
+  padding-top: 24px;
+}
 .container {
   width: 85%;
   max-width: 900px;
@@ -15,7 +17,6 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 16px;
-  margin-top: 24px;
 }
 
 .cabecalho__logo {
