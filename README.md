@@ -7,7 +7,7 @@ Nesse projeto, eu desenvolvi uma versão do jogo "Pedra, papel, tesoura". Foi um
 Clone o projeto
 
 ```bash
-  git@github.com:CarlosX26/rock-paper-scissors-js.git
+  git clone git@github.com:CarlosX26/rock-paper-scissors-js.git
 ```
 
 Entre no diretório do projeto
